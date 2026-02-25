@@ -397,7 +397,6 @@ async def get_shuttle_routes():
 async def get_shuttle_schedule():
     """Serve schedule.json file."""
     root_dir = Path(__file__).parent.parent.parent
-    print(root_dir)
     schedule_file = root_dir / "shared" / "schedule.json"
     if schedule_file.exists():
         return FileResponse(schedule_file)
